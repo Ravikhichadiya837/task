@@ -1,0 +1,262 @@
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hero {
+    background-image: linear-gradient(to bottom, #333, #666);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero h1 {
+    font-size: 48px;
+    text-align: center;
+}
+
+.hero p {
+    font-size: 24px;
+    text-align: center;
+}
+
+.button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #444;
+}
+
+.about {
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.about h1 {
+    font-size: 36px;
+}
+
+.about p {
+    font-size: 18px;
+}
+
+.rooms {
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.rooms h1 {
+    font-size: 36px;
+}
+
+.rooms .room-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.rooms .room-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.rooms .room-description {
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.rooms .room-description p {
+    font-size: 18px;
+}
+
+.amenities {
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.amenities h1 {
+    font-size: 36px;
+}
+
+.amenities .amenity-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.amenities .amenity-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.amenities .amenity-description {
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.amenities .amenity-description p {
+    font-size: 18px;
+}
+
+.gallery {
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.gallery h1 {
+    font-size: 36px;
+}
+
+.gallery .gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.contact {
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.contact h1 {
+    font-size: 36px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact form button:hover {
+    background-color: #444;
+}
+
+.map {
+    width: 100%;
+    height: 300px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* Phone (320px to 480px) */
+@media only screen and (max-width: 480px) {
+    header, .hero, .rooms, .amenities, .gallery, .contact {
+        display: block;
+    }
+
+    .hero img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .rooms .room-gallery, .amenities .amenity-gallery, .gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact form {
+        flex-direction: column;
+    }
+}
+
+/* Laptop (481px to 1080px) */
+@media only screen and (min-width: 481px) {
+    .hero img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .rooms .room-gallery, .amenities .amenity-gallery, .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet (1081px to 1440px) */
+@media only screen and (min-width: 1081px) {
+    .hero img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .rooms .room-gallery, .amenities .amenity-gallery, .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* TV (1441px and larger) */
+@media only screen and (min-width: 1441px) {
+    .hero img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+    }
+
+    .rooms .room-gallery, .amenities .amenity-gallery, .gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
